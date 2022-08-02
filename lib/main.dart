@@ -89,14 +89,12 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
+
+      backgroundColor: Colors.black,
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
+
         child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
@@ -113,20 +111,25 @@ class _MyHomePageState extends State<MyHomePage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
+
+
           children: <Widget>[
-            Text(AppLocalizations.of(context)!.helloWorld),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            Text(AppLocalizations.of(context)!.title,
+              style:
+               const TextStyle(fontFamily: 'Arial', color: Colors.yellow, fontSize: 30),
             ),
+
+            Text('$_counter',
+              style:
+               const TextStyle(fontFamily: 'Arial',color: Colors.yellow, fontSize: 30),
+            ),
+            ElevatedButton.icon(
+                onPressed: _incrementCounter,
+                icon: ImageIcon(AssetImage("images/jd.png")),
+                label: Text(AppLocalizations.of(context)!.press_to_start))
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: changeCountry,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

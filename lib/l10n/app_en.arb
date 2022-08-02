@@ -1,5 +1,7 @@
 {
     "helloWorld": "Hello World!",
+    "title": "Go to Deere",
+    "press_to_start": "Press to Start",
     "@helloWorld": {
       "description": "The conventional newborn programmer greeting"
     }
